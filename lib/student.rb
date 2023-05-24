@@ -14,8 +14,6 @@ class Student
       @scores.each do |grade|
         sum += grade
       end
-      sum.to_f
-      @total = sum / 2
-      @total
+      sum.fdiv(2)
     end
 end
