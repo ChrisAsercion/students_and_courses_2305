@@ -6,6 +6,15 @@ class Course
     @students = []
   end
   def full?
-    @full = false
+    if @students.length == 2
+      @full = true
+    else
+      false
+    end
+  end
+
+  def enroll(student)
+    @students << student
+
   end
 end
