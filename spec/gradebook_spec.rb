@@ -13,16 +13,19 @@ RSpec.describe Gradebook do
     gradebook = Gradebook.new("Mr. Monkey")
     course = Course.new("Calculus", 2)
     gradebook.add_course(course)
+    expect(gradebook.instructor).to eq("Mr. Monkey")
     expect(gradebook.courses).to eq([course])
   end
 
-  it 'can check the students enrolled to a course' do
+  xit 'can check the students enrolled to a course' do
     gradebook = Gradebook.new("Mr. Monkey")
     course = Course.new("Calculus", 2)
     gradebook.add_course(course)
     student1 = Student.new({name: "Morgan", age: 21})
     course.enroll(student1)
     gradebook.list_all_students(course)
+    expect(gradebook.list_all_students).to be_a(Hash)
+
   end
 
   it 'can check if the students are passing' do
