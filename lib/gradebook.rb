@@ -11,9 +11,10 @@ class Gradebook
   end
 
   def list_all_students(course)
-    require 'pry'; binding.pry
     @instructor_load[:course] = course.name
-    @instructor_load
+    require 'pry'; binding.pry
+    #I got stuck trying to assign the value to course.student
+    #right now, the key of the hash "instructor_load" is the course.name ("Calculus")
   end
 
   def students_below(threshold)
